@@ -29,6 +29,7 @@ import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -40,6 +41,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         PopupCameraUtils.checkPopupCameraService(context);
         ThermalUtils.startService(context);
+        TouchSamplingUtils.restoreSamplingValue(context);
         overrideHdrTypes(context);
     }
 
