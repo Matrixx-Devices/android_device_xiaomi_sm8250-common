@@ -291,6 +291,10 @@ SPAMMY_LOG_TAGS := \
      $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
  endif
 
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
+
 # Media configs
 PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
