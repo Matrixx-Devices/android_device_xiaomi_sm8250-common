@@ -17,3 +17,5 @@ binder_call(hal_audio_default, hal_dms_default)
 
 # Allow binder calls from audio hal to system app
 binder_call(hal_audio_default, system_app)
+
+get_prop(hal_audio_default, boot_status_prop)
