@@ -344,6 +344,7 @@ PRODUCT_PACKAGES += \
     init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
+    fstab.zram \
     init.qcom.power.rc \
     init.qcom.rc \
     init.pipa.rc \
