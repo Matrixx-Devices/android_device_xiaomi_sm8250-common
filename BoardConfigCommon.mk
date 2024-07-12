@@ -102,6 +102,11 @@ TARGET_KERNEL_CONFIG := \
     vendor/debugfs.config \
     vendor/xiaomi/sm8250-common.config
 
+# Global LTO
+TARGET_GLOBAL_LTO := thin
+TARGET_GLOBAL_OPTIMIZATION := O3
+TARGET_GLOBAL_THINLTO := true
+
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
