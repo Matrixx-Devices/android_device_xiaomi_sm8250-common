@@ -35,6 +35,26 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/mediadrm/libwvdrmengine.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib/c2.dolby.avc.dec.so': blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/lib/c2.dolby.avc.sec.dec.so': blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/lib/c2.dolby.hevc.dec.so': blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/lib/c2.dolby.hevc.sec.dec.so': blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'vendor/bin/hw/dolbycodec2': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
+    'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
+    'vendor/lib/libcodec2_hidl@1.0_vendor.so': blob_fixup()
+        .set_soname('libcodec2_hidl@1.0_vendor.so')
+        .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_vendor.so'),
+    'vendor/lib/libcodec2_vndk_vendor.so': blob_fixup()
+        .set_soname('libcodec2_vndk_vendor.so'),
+    'vendor/lib/c2.dolby.client.so': blob_fixup()
+        .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_vendor.so')
+        .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0_vendor.so'),
 }  # fmt: skip
 
 
