@@ -250,6 +250,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    SensorService
+
 # Media configs
 PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
