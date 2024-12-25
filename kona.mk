@@ -448,6 +448,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    NcmTetheringOverlay \
     WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
