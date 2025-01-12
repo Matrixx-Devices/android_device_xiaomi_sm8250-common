@@ -192,9 +192,6 @@ debug.sf.predictive_vsync=true
 debug.sf.phase_offset_threshold_for_next_vsync=1500000  
 debug.sf.use_frame_rate_api=true
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
