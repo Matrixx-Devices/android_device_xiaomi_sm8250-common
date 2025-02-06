@@ -102,6 +102,12 @@ TARGET_KERNEL_CONFIG := \
     vendor/debugfs.config \
     vendor/xiaomi/sm8250-common.config
 
+# Clang Flags
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := r547379
+KERNEL_SUPPORTS_LLVM_TOOLS := true
+KERNEL_FULL_LLVM := true
+
 # Global LTO
 TARGET_GLOBAL_LTO := thin
 TARGET_GLOBAL_OPTIMIZATION := O3
