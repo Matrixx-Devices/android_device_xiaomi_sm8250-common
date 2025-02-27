@@ -187,6 +187,11 @@ drm.service.enabled=true
 # Fingerprint
 persist.vendor.qfp=false
 
+# Frame Pacing  
+debug.sf.predictive_vsync=true  
+debug.sf.phase_offset_threshold_for_next_vsync=1500000  
+debug.sf.use_frame_rate_api=true
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
@@ -199,6 +204,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
+debug.sf.hw=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
@@ -207,7 +213,11 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
-debug.sf.hw=0
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=1500000
+debug.sf.late.app.duration=20000000
+debug.sf.frame_rate_multiple_threshold=144
+debug.adreno.disable_backend_affinity=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -216,6 +226,10 @@ vendor.gralloc.disable_ubwc=0
 # HVDCP
 persist.vendor.pps.disallowed=1
 persist.vendor.hvdcp_opti.disallowed=1
+
+# Input Latency
+debug.inputconsumer.latency=2000000 
+debug.sf.earlyGl.app.duration=4166667
 
 # Keystore
 ro.hardware.keystore_desede=true
@@ -239,6 +253,10 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
+
+# Scheduler Tuning  
+sched.walt.rt_exit_latency=2000000  
+sched.walt.rt_period=10000000
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
