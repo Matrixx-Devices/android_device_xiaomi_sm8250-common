@@ -200,11 +200,6 @@ drm.service.enabled=true
 # Fingerprint
 persist.vendor.qfp=false
 
-# Frame Pacing  
-debug.sf.predictive_vsync=true  
-debug.sf.phase_offset_threshold_for_next_vsync=1500000  
-debug.sf.use_frame_rate_api=true
-
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
