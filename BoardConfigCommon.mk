@@ -83,7 +83,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
 endif
 
 # Init
-TARGET_INIT_VENDOR_LIB ?= //$(COMMON_PATH):init_xiaomi_kona
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_xiaomi_kona)
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
