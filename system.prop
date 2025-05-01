@@ -105,3 +105,14 @@ power.saving.mode=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# S9 Ultra Spoof
+ro.product.manufacturer=samsung
+ro.product.model=SM-X916B
+ro.product.product.brand=samsung
+ro.product.product.manufacturer=samsung
+ro.product.product.model=SM-X916B
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8650-AC
+ro.gpu.model=Adreno750
+ro.gpu=Adreno750
