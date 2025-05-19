@@ -49,8 +49,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so'),
     'vendor/lib/libcodec2_hidl@1.0_vendor.so': blob_fixup()
         .set_soname('libcodec2_hidl@1.0_vendor.so')
-        .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_vendor.so')
-        .add_needed('libcodec2_hidl_shim.so'),
+        .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_vendor.so'),
+    'vendor/lib/libcodec2_vndk_vendor.so': blob_fixup()
+        .set_soname('libcodec2_vndk_vendor.so'),
     'vendor/lib/c2.dolby.client.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_vendor.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0_vendor.so'),
