@@ -98,3 +98,10 @@ power.saving.mode=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Nova Tab
+ro.product.model=NP03J
+ro.product.odm.model=NP03J
+ro.product.system.model=NP03J
+ro.product.vendor.model=NP03J
+ro.product.system_ext.model=NP03J
