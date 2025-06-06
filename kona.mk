@@ -244,10 +244,11 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+ifneq ($(TARGET_IS_TABLET),true)
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
-
+endif
 
 # Logging
 SPAMMY_LOG_TAGS := \
